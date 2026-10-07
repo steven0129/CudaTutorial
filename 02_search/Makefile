@@ -10,5 +10,5 @@ build: $(EXE_NAME).cu $(EXE_NAME).h
 clean:
 	rm -f $(EXE_NAME)
 run:
-	./$(EXE_NAME)
+	./$(EXE_NAME) $(ARGS)
 all: clean build run
