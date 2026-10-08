@@ -7,10 +7,10 @@ LDFLAGS += $(shell pkg-config --libs --static opencv)
 all: clean build
 
 build: 
-	$(CXX) convertRGBToGrey.cu --std c++17 `pkg-config opencv --cflags --libs` -o convertRGBToGrey -Wno-deprecated-gpu-targets $(CXXFLAGS) -I/usr/local/cuda/include -lcuda
+	$(CXX) convertRGB2grey.cu --std c++17 `pkg-config opencv --cflags --libs` -o convertRGB2grey -Wno-deprecated-gpu-targets $(CXXFLAGS) -I/usr/local/cuda/include -lcuda
 
 run:
-	./convertRGBToGrey $(ARGS)
+	./convertRGB2grey $(ARGS)
 
 clean:
-	rm -f convertRGBToGrey
+	rm -f convertRGB2grey
