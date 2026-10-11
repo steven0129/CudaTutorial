@@ -125,8 +125,8 @@ __host__ std::tuple<std::string, std::string, std::string, int> parseCommandLine
 {
     cout << "Parsing CLI arguments\n";
     int threadsPerBlock = 256;
-    std::string inputImage = "sloth.png";
-    std::string outputImage = "grey-sloth.png";
+    std::string inputImage = "Lena.png";
+    std::string outputImage = "Lena-blur.png";
     std::string currentPartId = "test";
 
     for (int i = 1; i < argc; i++)
