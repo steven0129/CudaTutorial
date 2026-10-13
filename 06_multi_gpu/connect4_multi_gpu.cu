@@ -2,6 +2,8 @@
 
 #include <cstdio>
 #include <cstdlib>
+#include <thread>
+#include <chrono>
 
 __device__ int findLandingRow(const int *board, int column)
 {
@@ -272,6 +274,7 @@ int main()
         }
 
         currentPlayer = currentPlayer == PLAYER_ONE ? PLAYER_TWO : PLAYER_ONE;
+	std::this_thread::sleep_for(std::chrono::seconds(1));
     }
 
     for (int player = PLAYER_ONE; player <= PLAYER_TWO; ++player)
